@@ -1,0 +1,28 @@
+{
+  "name": "tiny-pages",
+  "version": "1.0.0",
+  "description": "0.0.1",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Twiknight/tiny-pages.git"
+  },
+  "keywords": [
+    "blog",
+    "github-pages"
+  ],
+  "author": "Twiknight",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Twiknight/tiny-pages/issues"
+  },
+  "homepage": "https://github.com/Twiknight/tiny-pages#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "highlight.js": "^8.9.1",
+    "marked": "^0.3.5",
+    "webpack-stream": "^2.1.1"
+  }
+}
