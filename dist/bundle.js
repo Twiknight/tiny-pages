@@ -13265,10 +13265,11 @@
 	        };
 	    },
 	    created: function created() {
-	        fetch('blog.json').then(function (response) {
+	        var _this = this;
+	        fetch('./blog.json').then(function (response) {
 	            return response.json();
 	        }).then(function (json) {
-	            this.blog = json;
+	            _this.blog = json;
 	        })['catch'](function (ex) {
 	            console.log(ex.message);
 	        });
