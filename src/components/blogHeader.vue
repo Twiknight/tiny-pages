@@ -1,50 +1,27 @@
 <template>
-    <nav class="blogHeader">
-        <ul v-if="navs.length">
-            <li v-for="nav in navs"><a href="{{nav.link}}">{{nav.name}}</a></li>
-        </ul>
-    </nav>
+    <div class="page-header">
+        <h1>{{blog.title}}</h1>
+        <h1><small>{{blog.subtitle}}</small></h1>
+    </div>
 </template>
 
-<style lang="less">
-    @backgroundColor: #333;
-    @fontColor: #fff;
-    @darkenAmount: 10%;
-    @linkMargin: 0 10px;
-
-    .blogHeader{
-        background-color: @backgroundColor;
-        float: left;
-        ul{
-            list-style: none;
-            li{
-                float: left;
-                line-height: 1;
-                margin: @linkMargin;
-                a{
-                    text-decoration: none;
-                    font-weight: bold;
-                    color: darken(@fontColor,@darkenAmount);
-                  }
+<script>
+    export default {
+        name : 'BlogHeader',
+        data(){
+            return {
+                blog:{}
             }
+        },
+        created(){
+            let _this = this;
+            fetch('./blog.json').then(function(response){
+                return response.json();
+            }).then(function(json){
+                _this.blog = json;
+            }).catch(function(ex){
+                console.log(ex.message);
+            });
         }
     }
-</style>
-
-<script lang="babel">
-export default {
-    name:"BlogHeader",
-    data(){
-        return {
-            navs:[]
-        };
-    },
-    created(){
-        // this.navs = [
-        //     { name: "Home", link:"/" },
-        //     { name: "Toturial", link: "/toturial" },
-        //     { name: "About", link: "/about"}
-        // ];
-    }
-}
 </script>

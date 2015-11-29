@@ -1,16 +1,11 @@
 import Vue from 'vue';
-// import Router from 'vue-router';
+import Router from 'vue-router';
 import App from './components/app.vue';
-import Banner from './components/Banner.vue';
-import BlogHeader from './components/BlogHeader.vue';
+import BlogHeader from './components/blogHeader.vue';
 
-// Vue.use(Router);
+Vue.use(Router);
 
-// let router = new Router();
+let router = new Router();
 
-new Vue({
-    el:"body",
-    components: {
-        app:App
-    }
-});
+Vue.component("blogheader", BlogHeader);
+router.start(App,"#main");
