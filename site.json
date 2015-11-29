@@ -4,11 +4,11 @@
     "posts":[
         {
             "title":"how to use",
-            "url":"/posts/guide.md"
+            "url":"./_posts/guide.md"
         },
         {
             "title":"another blog",
-            "url":"/posts/another.md"
+            "url":"./_posts/another.md"
         }
     ],
     "author":"Twiknight",
