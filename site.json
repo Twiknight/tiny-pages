@@ -1,0 +1,17 @@
+{
+    "title":"Tiny-Pages",
+    "subtitle":"Free windows GitHub Pages users from jekyll!",
+    "posts":[
+        {
+            "title":"how to use",
+            "url":"./_posts/guide.md"
+        },
+        {
+            "title":"another blog",
+            "url":"./_posts/another.md"
+        }
+    ],
+    "author":"Twiknight",
+    "biography":"The official site of tiny-pages",
+    "homepage":"http://github.com/Twiknight"
+}
