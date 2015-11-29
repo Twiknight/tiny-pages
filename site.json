@@ -4,7 +4,7 @@
     "posts":[
         {
             "title":"Guide",
-            "url":"./_posts/guide.md"
+            "url":"https://raw.githubusercontent.com/Twiknight/tiny-pages/gh-pages/_posts/Guide.md"
         },
         {
             "title":"another blog",
