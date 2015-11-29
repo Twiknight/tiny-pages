@@ -14,11 +14,10 @@
             }
         },
         created(){
-            let _this = this;
-            fetch('./blog.json').then(function(response){
+            fetch('blog.json').then(function(response){
                 return response.json();
             }).then(function(json){
-                _this.blog = json;
+                this.blog = json;
             }).catch(function(ex){
                 console.log(ex.message);
             });
