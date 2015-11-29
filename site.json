@@ -4,11 +4,19 @@
     "posts":[
         {
             "title":"how to use",
+<<<<<<< HEAD
             "url":"./_posts/guide.md"
         },
         {
             "title":"another blog",
             "url":"./_posts/another.md"
+=======
+            "url":"/posts/guide.md"
+        },
+        {
+            "title":"another blog",
+            "url":"/posts/another.md"
+>>>>>>> parent of e63b8d8... Revert "v1.0"
         }
     ],
     "author":"Twiknight",
