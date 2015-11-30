@@ -1,12 +1,21 @@
 import Vue from 'vue';
-// import Router from 'vue-router';
 import App from './components/app.vue';
 import Banner from './components/Banner.vue';
 import BlogHeader from './components/BlogHeader.vue';
+import _fetch from 'whatwg-fetch';
+import _promise from 'promise';
 
-// Vue.use(Router);
+//polyfill for promise
+if(!global.Promise){
+  global.Promise = _promise;
+}
 
-// let router = new Router();
+//polyfill for fetch
+if(!global.fetch){
+  global.fetch = _fetch;
+}
+
+
 
 new Vue({
     el:"body",
@@ -14,3 +23,4 @@ new Vue({
         app:App
     }
 });
+
