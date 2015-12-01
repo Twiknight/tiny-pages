@@ -1,24 +1,10 @@
 <template>
     <div class="blog">
-        <article >
+        <article>
             {{{content}}}
         </article>
     </div>
 </template>
-
-<style lang="less">
-    @padding: 30px 10px;
-    @backcolor: #fff;
-    .blog{
-        width: 75%;
-        float:left;
-        padding: 0 15px;
-        article{
-            padding: @padding;
-            background-color: @backcolor;
-        }
-    }
-</style>
 
 <script>
     import marked from "marked";

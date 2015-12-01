@@ -9,22 +9,6 @@
     </aside>
 </template>
 
-<style lang="less">
-    .sidebar{
-        width: 20%;
-        padding: 0 10px;
-        overflow:hidden;
-        div{
-            .title{
-                border-bottom: 1px  solid #000;
-                padding-bottom: 5px;
-            }
-            padding: 30px 15px;
-            background: #fff;
-        }
-    }
-</style>
-
 <script>
     import PostList from "./PostList.vue"
 

@@ -10,27 +10,6 @@
     </div>
 </template>
 
-<style lang="less">
-    .post-list{
-        margin-top: 20px;
-        ul{
-            list-style: none;
-            padding: 0;
-            li{
-                font-size: 1.5em;
-                div::after{
-                    content:"";
-                    border-bottom:solid;
-                    border-color:#efefef;
-                }
-                div:hover{
-                    background-color: #efefef;
-                }
-            }
-        }
-    }
-</style>
-
 <script>
     export default{
         name:"postlist",

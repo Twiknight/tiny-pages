@@ -1,0 +1,55 @@
+body {
+  background-color: #efefef;
+}
+.banner {
+  background: #000;
+  padding: 100px 0 ;
+}
+.banner h1 {
+  text-align: center;
+  color: #fff;
+}
+.banner h1 small {
+  color: #e6e6e6;
+}
+.blog {
+  width: 75%;
+  float: left;
+  padding: 0 15px;
+}
+.blog article {
+  padding: 20px 10px;
+  background-color: #fff;
+}
+.post-list {
+  margin-top: 20px;
+}
+.post-list ul {
+  list-style: none;
+  padding: 0;
+}
+.post-list ul li {
+  font-size: 1.5em;
+}
+.post-list ul li div::after {
+  content: "";
+  border-bottom: solid;
+  border-color: #efefef;
+}
+.post-list ul li div:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+.sidebar {
+  width: 20%;
+  padding: 0 10px;
+  overflow: hidden;
+}
+.sidebar div {
+  padding: 30px 15px;
+  background: #fff;
+}
+.sidebar div .title {
+  border-bottom: 1px  solid #000;
+  padding-bottom: 5px;
+}

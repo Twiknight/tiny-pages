@@ -1,7 +1,5 @@
 import Vue from 'vue';
 import App from './components/app.vue';
-import Banner from './components/Banner.vue';
-import BlogHeader from './components/BlogHeader.vue';
 import _fetch from 'whatwg-fetch';
 import _promise from 'promise';
 
@@ -23,4 +21,3 @@ new Vue({
         app:App
     }
 });
-
