@@ -4,11 +4,11 @@
     "posts":[
         {
             "title":"Guide",
-            "url":"https://raw.githubusercontent.com/Twiknight/tiny-pages/gh-pages/_posts/Guide.md"
+            "url":"./articles/Guide.md"
         },
         {
             "title":"another blog",
-            "url":"./_posts/another.md"
+            "url":"./articles/another.md"
         }
     ],
     "author":"Twiknight",
