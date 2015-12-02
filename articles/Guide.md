@@ -51,7 +51,7 @@ Then you can begin your blogging.
         "posts":[
             {
                 "title":"Hello GitHub-Pages!",
-                "url":"/posts/Hello-GitHub-Pages.md"
+                "url":"/articles/Hello-GitHub-Pages.md"
             }
         ],
 4. Open your own GitHub-Pages site and you'll be able to select this one from the post list.
