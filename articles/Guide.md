@@ -45,7 +45,8 @@ OK, now you own a blog site look exactly the same as this one.
 Then you can begin your blogging.
 
 1. write a  new article, say named `Hello-GitHub-Pages.md`;
-2. Then you lay it in the folder `posts`;
+2. Then you lay it in the folder `articles`
+(Why not `posts`? Because `posts` is a reserved path in Jekyll);
 3. Add it in the `site.json`:
         "posts":[
             {
