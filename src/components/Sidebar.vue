@@ -1,7 +1,7 @@
 <template>
     <aside class="sidebar">
         <div>
-            <h3 class="title">{{$parent.site.author}}</h3>
+            <h3 class="block-title">{{$parent.site.author}}</h3>
             <h4>{{$parent.site.biography}}</h4>
             <a href="{{$parent.site.homepage}}"><h4>{{$parent.site.homepage}}</h4></a>
         </div>

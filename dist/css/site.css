@@ -15,11 +15,58 @@ body {
 .blog {
   width: 75%;
   float: left;
-  padding: 0 15px;
+  padding: 20px 10px;
 }
 .blog article {
-  padding: 20px 10px;
+  padding: 50px;
   background-color: #fff;
+}
+.md {
+  font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+  line-height: 1.25;
+}
+.md a {
+  color: #099eee;
+}
+.md a:visited {
+  color: #055fff;
+}
+.md a:hover {
+  color: #799ddd;
+}
+.md a:active {
+  color: #faa700;
+}
+.md a:focus {
+  outline: thin dotted;
+}
+.md a:hover,
+.md a:active {
+  outline: 0;
+}
+.md ul {
+  list-style: circle;
+}
+.md ol {
+  list-style: lower-roman;
+}
+.md pre,
+.md code,
+.md kbd,
+.md samp {
+  color: #fff;
+  background-color: #454545;
+  font-family: 'courier new', monospace;
+}
+.md pre {
+  padding: 1em 0;
+  margin: auto;
+}
+.md blockquote {
+  color: #efefef;
+  margin: 0;
+  padding-left: 4em;
+  border-left: 0.5em #efefef solid;
 }
 .post-list {
   margin-top: 20px;
@@ -29,27 +76,26 @@ body {
   padding: 0;
 }
 .post-list ul li {
+  margin: 0.5em;
   font-size: 1.5em;
 }
-.post-list ul li div::after {
-  content: "";
-  border-bottom: solid;
-  border-color: #efefef;
+.post-list ul li::before {
+  content: "* ";
 }
-.post-list ul li div:hover {
+.post-list ul li:hover {
   font-weight: bold;
   cursor: pointer;
 }
 .sidebar {
   width: 20%;
-  padding: 0 10px;
+  padding: 20px 10px;
   overflow: hidden;
+}
+.sidebar .block-title {
+  border-bottom: 1px  solid #000;
+  padding-bottom: 5px;
 }
 .sidebar div {
   padding: 30px 15px;
   background: #fff;
-}
-.sidebar div .title {
-  border-bottom: 1px  solid #000;
-  padding-bottom: 5px;
 }

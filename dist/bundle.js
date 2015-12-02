@@ -12146,7 +12146,7 @@
 /* 83 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"blog\">\r\n        <article>\r\n            {{{content}}}\r\n        </article>\r\n    </div>";
+	module.exports = "<div class=\"blog\">\r\n        <article class=\"md\">\r\n            {{{content}}}\r\n        </article>\r\n    </div>";
 
 /***/ },
 /* 84 */
@@ -12234,13 +12234,13 @@
 /* 88 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"post-list\">\r\n        <ul v-if=\"posts\">\r\n            <li v-for=\"post in posts\" v-on:click=\"loadPost(post.url)\">\r\n                <div>\r\n                    {{post.title}}\r\n                </div>\r\n            </li>\r\n        </ul>\r\n    </div>";
+	module.exports = "<div class=\"post-list\">\r\n        <h3 class=\"block-title\">Articles</h3>\r\n        <ul v-if=\"posts\">\r\n            <li v-for=\"post in posts\" v-on:click=\"loadPost(post.url)\">\r\n                    {{post.title}}\r\n            </li>\r\n        </ul>\r\n    </div>";
 
 /***/ },
 /* 89 */
 /***/ function(module, exports) {
 
-	module.exports = "<aside class=\"sidebar\">\r\n        <div>\r\n            <h3 class=\"title\">{{$parent.site.author}}</h3>\r\n            <h4>{{$parent.site.biography}}</h4>\r\n            <a href=\"{{$parent.site.homepage}}\"><h4>{{$parent.site.homepage}}</h4></a>\r\n        </div>\r\n        <postlist :posts=\"$parent.site.posts\"></postlist>\r\n    </aside>";
+	module.exports = "<aside class=\"sidebar\">\r\n        <div>\r\n            <h3 class=\"block-title\">{{$parent.site.author}}</h3>\r\n            <h4>{{$parent.site.biography}}</h4>\r\n            <a href=\"{{$parent.site.homepage}}\"><h4>{{$parent.site.homepage}}</h4></a>\r\n        </div>\r\n        <postlist :posts=\"$parent.site.posts\"></postlist>\r\n    </aside>";
 
 /***/ },
 /* 90 */

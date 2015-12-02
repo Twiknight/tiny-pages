@@ -1,6 +1,6 @@
 <template>
     <div class="blog">
-        <article>
+        <article class="md">
             {{{content}}}
         </article>
     </div>

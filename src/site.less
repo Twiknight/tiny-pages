@@ -23,10 +23,46 @@ body{
 .blog{
     width: 75%;
     float:left;
-    padding: 0 15px;
+    padding: @div-padding;
     article{
-        padding: @div-padding;
-        background-color: #fff;
+        padding: 50px;
+        background-color: #fff
+    }
+}
+
+.md{
+    font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+    line-height: 1.25;
+    a{
+        color:#099eee;
+        &:visited{color:#055fff}
+        &:hover{color:#799ddd}
+        &:active{color:#faa700}
+        &:focus{outline:thin dotted}
+        &:hover,&:active{
+            outline: 0;
+        }
+    }
+    ul{
+        list-style: circle;
+    }
+    ol{
+        list-style:lower-roman;
+    }
+    pre, code, kbd, samp{
+        color:#fff;
+        background-color: #454545;
+        font-family:  'courier new',monospace;
+    }
+    pre{
+        padding: 1em 0;
+        margin:auto;
+    }
+    blockquote{
+        color:#efefef;
+        margin:0;
+        padding-left: 4em;
+        border-left: 0.5em #efefef solid;
     }
 }
 
@@ -36,13 +72,12 @@ body{
         list-style: none;
         padding: 0;
         li{
+            margin: 0.5em;
             font-size: 1.5em;
-            div::after{
-                content:"";
-                border-bottom:solid;
-                border-color:#efefef;
+            &::before{
+                content: "* "
             }
-            div:hover{
+            &:hover{
                 font-weight: bold;
                 cursor:pointer;
             }
@@ -52,13 +87,13 @@ body{
 
 .sidebar{
     width: 20%;
-    padding: 0 10px;
+    padding: @div-padding;
     overflow:hidden;
+    .block-title{
+        border-bottom: 1px  solid #000;
+        padding-bottom: 5px;
+    }
     div{
-        .title{
-            border-bottom: 1px  solid #000;
-            padding-bottom: 5px;
-        }
         padding: 30px 15px;
         background: #fff;
     }
