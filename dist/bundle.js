@@ -46,38 +46,38 @@
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
 	
-	var _interopRequireDefault = __webpack_require__(6)['default'];
-	
-	var _vue = __webpack_require__(7);
+	var _vue = __webpack_require__(6);
 	
 	var _vue2 = _interopRequireDefault(_vue);
 	
-	var _componentsAppVue = __webpack_require__(75);
+	var _app = __webpack_require__(74);
 	
-	var _componentsAppVue2 = _interopRequireDefault(_componentsAppVue);
+	var _app2 = _interopRequireDefault(_app);
 	
-	var _whatwgFetch = __webpack_require__(91);
+	var _whatwgFetch = __webpack_require__(97);
 	
 	var _whatwgFetch2 = _interopRequireDefault(_whatwgFetch);
 	
-	var _promise2 = __webpack_require__(92);
+	var _promise2 = __webpack_require__(98);
 	
 	var _promise3 = _interopRequireDefault(_promise2);
 	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
 	//polyfill for promise
 	if (!global.Promise) {
-	    global.Promise = _promise3['default'];
+	    global.Promise = _promise3.default;
 	}
 	
 	//polyfill for fetch
 	if (!global.fetch) {
-	    global.fetch = _whatwgFetch2['default'];
+	    global.fetch = _whatwgFetch2.default;
 	}
 	
-	new _vue2['default']({
+	new _vue2.default({
 	    el: "body",
 	    components: {
-	        app: _componentsAppVue2['default']
+	        app: _app2.default
 	    }
 	});
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
@@ -89,23 +89,9 @@
 /* 4 */,
 /* 5 */,
 /* 6 */
-/***/ function(module, exports) {
-
-	"use strict";
-	
-	exports["default"] = function (obj) {
-	  return obj && obj.__esModule ? obj : {
-	    "default": obj
-	  };
-	};
-	
-	exports.__esModule = true;
-
-/***/ },
-/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(9)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(8)
 	var extend = _.extend
 	
 	/**
@@ -130,7 +116,7 @@
 	 * Mixin global API
 	 */
 	
-	extend(Vue, __webpack_require__(21))
+	extend(Vue, __webpack_require__(20))
 	
 	/**
 	 * Vue and every constructor that extends Vue has an
@@ -143,9 +129,9 @@
 	
 	Vue.options = {
 	  replace: true,
-	  directives: __webpack_require__(24),
-	  elementDirectives: __webpack_require__(58),
-	  filters: __webpack_require__(61),
+	  directives: __webpack_require__(23),
+	  elementDirectives: __webpack_require__(57),
+	  filters: __webpack_require__(60),
 	  transitions: {},
 	  components: {},
 	  partials: {}
@@ -177,20 +163,20 @@
 	 * Mixin internal instance methods
 	 */
 	
+	extend(p, __webpack_require__(62))
 	extend(p, __webpack_require__(63))
 	extend(p, __webpack_require__(64))
-	extend(p, __webpack_require__(65))
-	extend(p, __webpack_require__(68))
-	extend(p, __webpack_require__(70))
+	extend(p, __webpack_require__(67))
+	extend(p, __webpack_require__(69))
 	
 	/**
 	 * Mixin public API methods
 	 */
 	
+	extend(p, __webpack_require__(70))
 	extend(p, __webpack_require__(71))
 	extend(p, __webpack_require__(72))
 	extend(p, __webpack_require__(73))
-	extend(p, __webpack_require__(74))
 	
 	Vue.version = '1.0.8'
 	module.exports = _.Vue = Vue
@@ -202,10 +188,10 @@
 	  }
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ },
-/* 8 */
+/* 7 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -302,22 +288,22 @@
 
 
 /***/ },
-/* 9 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var lang = __webpack_require__(10)
+	var lang = __webpack_require__(9)
 	var extend = lang.extend
 	
 	extend(exports, lang)
+	extend(exports, __webpack_require__(10))
 	extend(exports, __webpack_require__(11))
-	extend(exports, __webpack_require__(12))
+	extend(exports, __webpack_require__(17))
 	extend(exports, __webpack_require__(18))
 	extend(exports, __webpack_require__(19))
-	extend(exports, __webpack_require__(20))
 
 
 /***/ },
-/* 10 */
+/* 9 */
 /***/ function(module, exports) {
 
 	/**
@@ -713,7 +699,7 @@
 
 
 /***/ },
-/* 11 */
+/* 10 */
 /***/ function(module, exports) {
 
 	// can we use __proto__?
@@ -804,12 +790,12 @@
 
 
 /***/ },
-/* 12 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(9)
-	var config = __webpack_require__(13)
-	var transition = __webpack_require__(17)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(8)
+	var config = __webpack_require__(12)
+	var transition = __webpack_require__(16)
 	
 	/**
 	 * Query an element selector if it's not an element already.
@@ -1171,10 +1157,10 @@
 	  }
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ },
-/* 13 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = {
@@ -1268,7 +1254,7 @@
 	
 	var delimiters = ['{{', '}}']
 	var unsafeDelimiters = ['{{{', '}}}']
-	var textParser = __webpack_require__(14)
+	var textParser = __webpack_require__(13)
 	
 	Object.defineProperty(module.exports, 'delimiters', {
 	  get: function () {
@@ -1292,12 +1278,12 @@
 
 
 /***/ },
-/* 14 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Cache = __webpack_require__(15)
-	var config = __webpack_require__(13)
-	var dirParser = __webpack_require__(16)
+	var Cache = __webpack_require__(14)
+	var config = __webpack_require__(12)
+	var dirParser = __webpack_require__(15)
 	var regexEscapeRE = /[-.*+?^${}()|[\]\/\\]/g
 	var cache, tagRE, htmlRE
 	
@@ -1458,7 +1444,7 @@
 
 
 /***/ },
-/* 15 */
+/* 14 */
 /***/ function(module, exports) {
 
 	/**
@@ -1576,11 +1562,11 @@
 
 
 /***/ },
-/* 16 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(9)
-	var Cache = __webpack_require__(15)
+	var _ = __webpack_require__(8)
+	var Cache = __webpack_require__(14)
 	var cache = new Cache(1000)
 	var filterTokenRE = /[^\s'"]+|'[^']*'|"[^"]*"/g
 	var reservedArgRE = /^in$|^-?\d+/
@@ -1716,10 +1702,10 @@
 
 
 /***/ },
-/* 17 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(9)
+	var _ = __webpack_require__(8)
 	
 	/**
 	 * Append with transition.
@@ -1801,11 +1787,11 @@
 
 
 /***/ },
-/* 18 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(9)
-	var config = __webpack_require__(13)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(8)
+	var config = __webpack_require__(12)
 	var extend = _.extend
 	
 	/**
@@ -2164,13 +2150,13 @@
 	    assets[camelizedId.charAt(0).toUpperCase() + camelizedId.slice(1)]
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ },
-/* 19 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(9)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(8)
 	
 	/**
 	 * Check if an element is a component, if yes return its
@@ -2321,10 +2307,10 @@
 	  return Object.prototype.toString.call(val).slice(8, -1)
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ },
-/* 20 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -2333,7 +2319,7 @@
 	
 	if (process.env.NODE_ENV !== 'production') {
 	
-	  var config = __webpack_require__(13)
+	  var config = __webpack_require__(12)
 	  var hasConsole = typeof console !== 'undefined'
 	
 	  /**
@@ -2375,14 +2361,14 @@
 	  }
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ },
-/* 21 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(9)
-	var config = __webpack_require__(13)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(8)
+	var config = __webpack_require__(12)
 	
 	/**
 	 * Expose useful internals
@@ -2398,15 +2384,15 @@
 	 * The following are exposed for advanced usage / plugins
 	 */
 	
-	exports.compiler = __webpack_require__(22)
-	exports.FragmentFactory = __webpack_require__(29)
-	exports.internalDirectives = __webpack_require__(44)
+	exports.compiler = __webpack_require__(21)
+	exports.FragmentFactory = __webpack_require__(28)
+	exports.internalDirectives = __webpack_require__(43)
 	exports.parsers = {
-	  path: __webpack_require__(51),
-	  text: __webpack_require__(14),
-	  template: __webpack_require__(27),
-	  directive: __webpack_require__(16),
-	  expression: __webpack_require__(50)
+	  path: __webpack_require__(50),
+	  text: __webpack_require__(13),
+	  template: __webpack_require__(26),
+	  directive: __webpack_require__(15),
+	  expression: __webpack_require__(49)
 	}
 	
 	/**
@@ -2543,29 +2529,29 @@
 	  }
 	})
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
+
+/***/ },
+/* 21 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var _ = __webpack_require__(8)
+	
+	_.extend(exports, __webpack_require__(22))
+	_.extend(exports, __webpack_require__(56))
+
 
 /***/ },
 /* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(9)
-	
-	_.extend(exports, __webpack_require__(23))
-	_.extend(exports, __webpack_require__(57))
-
-
-/***/ },
-/* 23 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(9)
-	var publicDirectives = __webpack_require__(24)
-	var internalDirectives = __webpack_require__(44)
-	var compileProps = __webpack_require__(56)
-	var textParser = __webpack_require__(14)
-	var dirParser = __webpack_require__(16)
-	var templateParser = __webpack_require__(27)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(8)
+	var publicDirectives = __webpack_require__(23)
+	var internalDirectives = __webpack_require__(43)
+	var compileProps = __webpack_require__(55)
+	var textParser = __webpack_require__(13)
+	var dirParser = __webpack_require__(15)
+	var templateParser = __webpack_require__(26)
 	var resolveAsset = _.resolveAsset
 	
 	// special binding prefixes
@@ -3331,43 +3317,43 @@
 	  }
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
+
+/***/ },
+/* 23 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// text & html
+	exports.text = __webpack_require__(24)
+	exports.html = __webpack_require__(25)
+	
+	// logic control
+	exports['for'] = __webpack_require__(27)
+	exports['if'] = __webpack_require__(30)
+	exports.show = __webpack_require__(31)
+	
+	// two-way binding
+	exports.model = __webpack_require__(32)
+	
+	// event handling
+	exports.on = __webpack_require__(37)
+	
+	// attributes
+	exports.bind = __webpack_require__(38)
+	
+	// ref & el
+	exports.el = __webpack_require__(40)
+	exports.ref = __webpack_require__(41)
+	
+	// cloak
+	exports.cloak = __webpack_require__(42)
+
 
 /***/ },
 /* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// text & html
-	exports.text = __webpack_require__(25)
-	exports.html = __webpack_require__(26)
-	
-	// logic control
-	exports['for'] = __webpack_require__(28)
-	exports['if'] = __webpack_require__(31)
-	exports.show = __webpack_require__(32)
-	
-	// two-way binding
-	exports.model = __webpack_require__(33)
-	
-	// event handling
-	exports.on = __webpack_require__(38)
-	
-	// attributes
-	exports.bind = __webpack_require__(39)
-	
-	// ref & el
-	exports.el = __webpack_require__(41)
-	exports.ref = __webpack_require__(42)
-	
-	// cloak
-	exports.cloak = __webpack_require__(43)
-
-
-/***/ },
-/* 25 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var _ = __webpack_require__(9)
+	var _ = __webpack_require__(8)
 	
 	module.exports = {
 	
@@ -3384,11 +3370,11 @@
 
 
 /***/ },
-/* 26 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(9)
-	var templateParser = __webpack_require__(27)
+	var _ = __webpack_require__(8)
+	var templateParser = __webpack_require__(26)
 	
 	module.exports = {
 	
@@ -3430,11 +3416,11 @@
 
 
 /***/ },
-/* 27 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(9)
-	var Cache = __webpack_require__(15)
+	var _ = __webpack_require__(8)
+	var Cache = __webpack_require__(14)
 	var templateCache = new Cache(1000)
 	var idSelectorCache = new Cache(1000)
 	
@@ -3724,11 +3710,11 @@
 
 
 /***/ },
-/* 28 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(9)
-	var FragmentFactory = __webpack_require__(29)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(8)
+	var FragmentFactory = __webpack_require__(28)
 	var isObject = _.isObject
 	var uid = 0
 	
@@ -4317,17 +4303,17 @@
 	  }
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ },
-/* 29 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(9)
-	var compiler = __webpack_require__(22)
-	var templateParser = __webpack_require__(27)
-	var Fragment = __webpack_require__(30)
-	var Cache = __webpack_require__(15)
+	var _ = __webpack_require__(8)
+	var compiler = __webpack_require__(21)
+	var templateParser = __webpack_require__(26)
+	var Fragment = __webpack_require__(29)
+	var Cache = __webpack_require__(14)
 	var linkerCache = new Cache(5000)
 	
 	/**
@@ -4382,11 +4368,11 @@
 
 
 /***/ },
-/* 30 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(9)
-	var transition = __webpack_require__(17)
+	var _ = __webpack_require__(8)
+	var transition = __webpack_require__(16)
 	
 	/**
 	 * Abstraction for a partially-compiled fragment.
@@ -4574,11 +4560,11 @@
 
 
 /***/ },
-/* 31 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(9)
-	var FragmentFactory = __webpack_require__(29)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(8)
+	var FragmentFactory = __webpack_require__(28)
 	
 	module.exports = {
 	
@@ -4644,14 +4630,14 @@
 	  }
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ },
-/* 32 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(9)
-	var transition = __webpack_require__(17)
+	var _ = __webpack_require__(8)
+	var transition = __webpack_require__(16)
 	
 	module.exports = {
 	
@@ -4679,16 +4665,16 @@
 
 
 /***/ },
-/* 33 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(9)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(8)
 	
 	var handlers = {
-	  text: __webpack_require__(34),
-	  radio: __webpack_require__(35),
-	  select: __webpack_require__(36),
-	  checkbox: __webpack_require__(37)
+	  text: __webpack_require__(33),
+	  radio: __webpack_require__(34),
+	  select: __webpack_require__(35),
+	  checkbox: __webpack_require__(36)
 	}
 	
 	module.exports = {
@@ -4765,13 +4751,13 @@
 	  }
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ },
-/* 34 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(9)
+	var _ = __webpack_require__(8)
 	
 	module.exports = {
 	
@@ -4901,10 +4887,10 @@
 
 
 /***/ },
-/* 35 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(9)
+	var _ = __webpack_require__(8)
 	
 	module.exports = {
 	
@@ -4941,10 +4927,10 @@
 
 
 /***/ },
-/* 36 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(9)
+	var _ = __webpack_require__(8)
 	
 	module.exports = {
 	
@@ -5065,10 +5051,10 @@
 
 
 /***/ },
-/* 37 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(9)
+	var _ = __webpack_require__(8)
 	
 	module.exports = {
 	
@@ -5133,10 +5119,10 @@
 
 
 /***/ },
-/* 38 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(9)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(8)
 	
 	// keyCode aliases
 	var keyCodes = {
@@ -5261,13 +5247,13 @@
 	  }
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ },
-/* 39 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(9)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(8)
 	
 	// xlink
 	var xlinkNS = 'http://www.w3.org/1999/xlink'
@@ -5355,7 +5341,7 @@
 	  },
 	
 	  // share object handler with v-bind:class
-	  handleObject: __webpack_require__(40).handleObject,
+	  handleObject: __webpack_require__(39).handleObject,
 	
 	  handleSingle: function (attr, value) {
 	    if (inputProps[attr] && attr in this.el) {
@@ -5391,13 +5377,13 @@
 	  }
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ },
-/* 40 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(9)
+	var _ = __webpack_require__(8)
 	var prefixes = ['-webkit-', '-moz-', '-ms-']
 	var camelPrefixes = ['Webkit', 'Moz', 'ms']
 	var importantRE = /!important;?$/
@@ -5507,10 +5493,10 @@
 
 
 /***/ },
-/* 41 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(9)
+	var _ = __webpack_require__(8)
 	
 	module.exports = {
 	
@@ -5540,13 +5526,13 @@
 
 
 /***/ },
-/* 42 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {if (process.env.NODE_ENV !== 'production') {
 	  module.exports = {
 	    bind: function () {
-	      __webpack_require__(9).warn(
+	      __webpack_require__(8).warn(
 	        'v-ref:' + this.arg + ' must be used on a child ' +
 	        'component. Found on <' + this.el.tagName.toLowerCase() + '>.'
 	      )
@@ -5554,10 +5540,10 @@
 	  }
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ },
-/* 43 */
+/* 42 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -5571,21 +5557,21 @@
 
 
 /***/ },
-/* 44 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports.style = __webpack_require__(40)
-	exports['class'] = __webpack_require__(45)
-	exports.component = __webpack_require__(46)
-	exports.prop = __webpack_require__(47)
-	exports.transition = __webpack_require__(53)
+	exports.style = __webpack_require__(39)
+	exports['class'] = __webpack_require__(44)
+	exports.component = __webpack_require__(45)
+	exports.prop = __webpack_require__(46)
+	exports.transition = __webpack_require__(52)
 
 
 /***/ },
-/* 45 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(9)
+	var _ = __webpack_require__(8)
 	var addClass = _.addClass
 	var removeClass = _.removeClass
 	
@@ -5659,11 +5645,11 @@
 
 
 /***/ },
-/* 46 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(9)
-	var templateParser = __webpack_require__(27)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(8)
+	var templateParser = __webpack_require__(26)
 	
 	module.exports = {
 	
@@ -6011,10 +5997,10 @@
 	  }
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ },
-/* 47 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// NOTE: the prop internal directive is compiled and linked
@@ -6022,9 +6008,9 @@
 	// The purpose is to make the initial prop values available
 	// inside `created` hooks and `data` functions.
 	
-	var _ = __webpack_require__(9)
-	var Watcher = __webpack_require__(48)
-	var bindingModes = __webpack_require__(13)._propBindingModes
+	var _ = __webpack_require__(8)
+	var Watcher = __webpack_require__(47)
+	var bindingModes = __webpack_require__(12)._propBindingModes
 	
 	module.exports = {
 	
@@ -6089,14 +6075,14 @@
 
 
 /***/ },
-/* 48 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(9)
-	var config = __webpack_require__(13)
-	var Dep = __webpack_require__(49)
-	var expParser = __webpack_require__(50)
-	var batcher = __webpack_require__(52)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(8)
+	var config = __webpack_require__(12)
+	var Dep = __webpack_require__(48)
+	var expParser = __webpack_require__(49)
+	var batcher = __webpack_require__(51)
 	var uid = 0
 	
 	/**
@@ -6429,13 +6415,13 @@
 	
 	module.exports = Watcher
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ },
-/* 49 */
+/* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(9)
+	var _ = __webpack_require__(8)
 	var uid = 0
 	
 	/**
@@ -6499,12 +6485,12 @@
 
 
 /***/ },
-/* 50 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(9)
-	var Path = __webpack_require__(51)
-	var Cache = __webpack_require__(15)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(8)
+	var Path = __webpack_require__(50)
+	var Cache = __webpack_require__(14)
 	var expressionCache = new Cache(1000)
 	
 	var allowedKeywords =
@@ -6767,14 +6753,14 @@
 	    exp.slice(0, 5) !== 'Math.'
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ },
-/* 51 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(9)
-	var Cache = __webpack_require__(15)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(8)
+	var Cache = __webpack_require__(14)
 	var pathCache = new Cache(1000)
 	var identRE = exports.identRE = /^[$_a-zA-Z]+[\w$]*$/
 	
@@ -7132,14 +7118,14 @@
 	  return true
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ },
-/* 52 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(9)
-	var config = __webpack_require__(13)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(8)
+	var config = __webpack_require__(12)
 	
 	// we have two separate queues: one for directive updates
 	// and one for user watcher registered via $watch().
@@ -7244,14 +7230,14 @@
 	  }
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ },
-/* 53 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(9)
-	var Transition = __webpack_require__(54)
+	var _ = __webpack_require__(8)
+	var Transition = __webpack_require__(53)
 	
 	module.exports = {
 	
@@ -7273,11 +7259,11 @@
 
 
 /***/ },
-/* 54 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(9)
-	var queue = __webpack_require__(55)
+	var _ = __webpack_require__(8)
+	var queue = __webpack_require__(54)
 	var addClass = _.addClass
 	var removeClass = _.removeClass
 	var transitionEndEvent = _.transitionEndEvent
@@ -7646,10 +7632,10 @@
 
 
 /***/ },
-/* 55 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(9)
+	var _ = __webpack_require__(8)
 	var queue = []
 	var queued = false
 	
@@ -7687,17 +7673,17 @@
 
 
 /***/ },
-/* 56 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(9)
-	var dirParser = __webpack_require__(16)
-	var propDef = __webpack_require__(47)
-	var propBindingModes = __webpack_require__(13)._propBindingModes
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(8)
+	var dirParser = __webpack_require__(15)
+	var propDef = __webpack_require__(46)
+	var propBindingModes = __webpack_require__(12)._propBindingModes
 	var empty = {}
 	
 	// regexes
-	var identRE = __webpack_require__(51).identRE
+	var identRE = __webpack_require__(50).identRE
 	var settablePathRE = /^[A-Za-z_$][\w$]*(\.[A-Za-z_$][\w$]*|\[[^\[\]]+\])*$/
 	
 	/**
@@ -7898,14 +7884,14 @@
 	    : def
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ },
-/* 57 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(9)
-	var templateParser = __webpack_require__(27)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(8)
+	var templateParser = __webpack_require__(26)
 	var specialCharRE = /[^\w\-:\.]/
 	
 	/**
@@ -8053,22 +8039,22 @@
 	  }
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
+
+/***/ },
+/* 57 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports.slot = __webpack_require__(58)
+	exports.partial = __webpack_require__(59)
+
 
 /***/ },
 /* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports.slot = __webpack_require__(59)
-	exports.partial = __webpack_require__(60)
-
-
-/***/ },
-/* 59 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var _ = __webpack_require__(9)
-	var templateParser = __webpack_require__(27)
+	var _ = __webpack_require__(8)
+	var templateParser = __webpack_require__(26)
 	
 	// This is the elementDirective that handles <content>
 	// transclusions. It relies on the raw content of an
@@ -8194,12 +8180,12 @@
 
 
 /***/ },
-/* 60 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(9)
-	var vIf = __webpack_require__(31)
-	var FragmentFactory = __webpack_require__(29)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(8)
+	var vIf = __webpack_require__(30)
+	var FragmentFactory = __webpack_require__(28)
 	
 	module.exports = {
 	
@@ -8241,13 +8227,13 @@
 	  }
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ },
-/* 61 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(9)
+	var _ = __webpack_require__(8)
 	
 	/**
 	 * Stringify value.
@@ -8364,16 +8350,16 @@
 	 * Install special array filters
 	 */
 	
-	_.extend(exports, __webpack_require__(62))
+	_.extend(exports, __webpack_require__(61))
 
 
 /***/ },
-/* 62 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(9)
-	var Path = __webpack_require__(51)
-	var toArray = __webpack_require__(28)._postProcess
+	var _ = __webpack_require__(8)
+	var Path = __webpack_require__(50)
+	var toArray = __webpack_require__(27)._postProcess
 	
 	/**
 	 * Limit filter for arrays
@@ -8492,10 +8478,10 @@
 
 
 /***/ },
-/* 63 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var mergeOptions = __webpack_require__(9).mergeOptions
+	var mergeOptions = __webpack_require__(8).mergeOptions
 	var uid = 0
 	
 	/**
@@ -8610,10 +8596,10 @@
 
 
 /***/ },
-/* 64 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(9)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(8)
 	var inDoc = _.inDoc
 	var eventRE = /^v-on:|^@/
 	
@@ -8777,17 +8763,17 @@
 	  this.$emit('hook:' + hook)
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ },
-/* 65 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(9)
-	var compiler = __webpack_require__(22)
-	var Observer = __webpack_require__(66)
-	var Dep = __webpack_require__(49)
-	var Watcher = __webpack_require__(48)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(8)
+	var compiler = __webpack_require__(21)
+	var Observer = __webpack_require__(65)
+	var Dep = __webpack_require__(48)
+	var Watcher = __webpack_require__(47)
 	
 	/**
 	 * Setup the scope of an instance, which contains:
@@ -9025,16 +9011,16 @@
 	  }
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ },
-/* 66 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(9)
-	var config = __webpack_require__(13)
-	var Dep = __webpack_require__(49)
-	var arrayMethods = __webpack_require__(67)
+	var _ = __webpack_require__(8)
+	var config = __webpack_require__(12)
+	var Dep = __webpack_require__(48)
+	var arrayMethods = __webpack_require__(66)
 	var arrayKeys = Object.getOwnPropertyNames(arrayMethods)
 	
 	/**
@@ -9261,10 +9247,10 @@
 
 
 /***/ },
-/* 67 */
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(9)
+	var _ = __webpack_require__(8)
 	var arrayProto = Array.prototype
 	var arrayMethods = Object.create(arrayProto)
 	
@@ -9357,12 +9343,12 @@
 
 
 /***/ },
-/* 68 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(9)
-	var Directive = __webpack_require__(69)
-	var compiler = __webpack_require__(22)
+	var _ = __webpack_require__(8)
+	var Directive = __webpack_require__(68)
+	var compiler = __webpack_require__(21)
 	
 	/**
 	 * Update v-ref for component.
@@ -9600,12 +9586,12 @@
 
 
 /***/ },
-/* 69 */
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(9)
-	var Watcher = __webpack_require__(48)
-	var expParser = __webpack_require__(50)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(8)
+	var Watcher = __webpack_require__(47)
+	var expParser = __webpack_require__(49)
 	function noop () {}
 	
 	/**
@@ -9926,13 +9912,13 @@
 	
 	module.exports = Directive
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ },
-/* 70 */
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(9)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(8)
 	
 	/**
 	 * Apply a list of filter (descriptors) to a value.
@@ -10026,18 +10012,18 @@
 	  }
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ },
-/* 71 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(9)
-	var Watcher = __webpack_require__(48)
-	var Path = __webpack_require__(51)
-	var textParser = __webpack_require__(14)
-	var dirParser = __webpack_require__(16)
-	var expParser = __webpack_require__(50)
+	var _ = __webpack_require__(8)
+	var Watcher = __webpack_require__(47)
+	var Path = __webpack_require__(50)
+	var textParser = __webpack_require__(13)
+	var dirParser = __webpack_require__(15)
+	var expParser = __webpack_require__(49)
 	var filterRE = /[^|]\|[^|]/
 	
 	/**
@@ -10209,11 +10195,11 @@
 
 
 /***/ },
-/* 72 */
+/* 71 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(9)
-	var transition = __webpack_require__(17)
+	var _ = __webpack_require__(8)
+	var transition = __webpack_require__(16)
 	
 	/**
 	 * Convenience on-instance nextTick. The callback is
@@ -10419,10 +10405,10 @@
 
 
 /***/ },
-/* 73 */
+/* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _ = __webpack_require__(9)
+	var _ = __webpack_require__(8)
 	
 	/**
 	 * Listen on the given `event` with `fn`.
@@ -10594,11 +10580,11 @@
 
 
 /***/ },
-/* 74 */
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(9)
-	var compiler = __webpack_require__(22)
+	/* WEBPACK VAR INJECTION */(function(process) {var _ = __webpack_require__(8)
+	var compiler = __webpack_require__(21)
 	
 	/**
 	 * Set instance target element and kick off the compilation
@@ -10666,31 +10652,30 @@
 	  )
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
+
+/***/ },
+/* 74 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(75)
+	
+	if (module.exports.__esModule) module.exports = module.exports.default
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(96)
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "D:\\Documents\\GitHub\\tiny-pages-server\\tiny-pages\\src\\components\\app.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
+	  }
+	})()}
 
 /***/ },
 /* 75 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__(76)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(90)
-	if (false) {
-	(function () {
-	var hotAPI = require("vue-hot-reload-api")
-	hotAPI.install(require("vue"))
-	if (!hotAPI.compatible) return
-	var id = "-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./app.vue"
-	hotAPI.createRecord(id, module.exports)
-	module.hot.accept(["-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./app.vue","-!vue-html!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./app.vue"], function () {
-	var newOptions = require("-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./app.vue")
-	var newTemplate = require("-!vue-html!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./app.vue")
-	hotAPI.update(id, newOptions, newTemplate)
-	})
-	})()
-	}
-
-/***/ },
-/* 76 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -10699,79 +10684,411 @@
 	    value: true
 	});
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-	
-	var _vue = __webpack_require__(7);
+	var _vue = __webpack_require__(6);
 	
 	var _vue2 = _interopRequireDefault(_vue);
 	
-	var _BannerVue = __webpack_require__(77);
+	var _vuex = __webpack_require__(76);
 	
-	var _BannerVue2 = _interopRequireDefault(_BannerVue);
+	var _vuex2 = _interopRequireDefault(_vuex);
 	
-	var _BlogVue = __webpack_require__(80);
+	var _Banner = __webpack_require__(83);
 	
-	var _BlogVue2 = _interopRequireDefault(_BlogVue);
+	var _Banner2 = _interopRequireDefault(_Banner);
 	
-	var _SidebarVue = __webpack_require__(84);
+	var _Blog = __webpack_require__(86);
 	
-	var _SidebarVue2 = _interopRequireDefault(_SidebarVue);
+	var _Blog2 = _interopRequireDefault(_Blog);
 	
-	exports["default"] = {
+	var _Sidebar = __webpack_require__(90);
+	
+	var _Sidebar2 = _interopRequireDefault(_Sidebar);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } } // <template>
+	
+	//     <div class="app" id="wrapper">
+	
+	//         <Banner></Banner>
+	
+	//         <div class="content">
+	
+	//             <blog></blog>
+	
+	//             <sidebar></sidebar>
+	
+	//         </div>
+	
+	//     </div>
+	
+	// </template>
+	
+	// <script lang="babel">
+	
+	var loadSite = _vuex2.default.actions.loadSite;
+	var changePost = _vuex2.default.actions.changePost;
+	
+	exports.default = {
 	    name: "App",
 	    props: ["currentPost"],
 	    components: {
-	        banner: _BannerVue2["default"],
-	        blog: _BlogVue2["default"],
-	        sidebar: _SidebarVue2["default"]
-	    },
-	    data: function data() {
-	        return {
-	            site: {}
-	        };
+	        banner: _Banner2.default,
+	        blog: _Blog2.default,
+	        sidebar: _Sidebar2.default
 	    },
 	    created: function created() {
-	        var _this = this;
 	        fetch('./site.json').then(function (response) {
 	            return response.json();
-	        }).then(function (json) {
-	            _this.site = json;
-	        }).then(function () {
-	            if (_this.site.posts && _this.site.posts.length > 0) {
-	                _this.$broadcast("post-change", _this.site.posts[0].url);
+	        }).then(function (site) {
+	            loadSite(site);
+	            if (site.posts && [].concat(_toConsumableArray(site.posts)).length > 0) {
+	                changePost(site.posts[0].url);
 	            }
-	        })["catch"](function (ex) {
+	        }).catch(function (ex) {
 	            console.log(ex.message);
 	        });
-	    },
-	    events: {
-	        "post-change": function postChange(url) {
-	            this.$broadcast("post-change", url);
-	        }
 	    }
 	};
-	module.exports = exports["default"];
+	// </script>
+
+/***/ },
+/* 76 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _vue = __webpack_require__(6);
+	
+	var _vue2 = _interopRequireDefault(_vue);
+	
+	var _vuex = __webpack_require__(77);
+	
+	var _vuex2 = _interopRequireDefault(_vuex);
+	
+	var _actions = __webpack_require__(81);
+	
+	var _actions2 = _interopRequireDefault(_actions);
+	
+	var _mutations = __webpack_require__(82);
+	
+	var _mutations2 = _interopRequireDefault(_mutations);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	_vue2.default.use(_vuex2.default);
+	
+	var state = {
+	    site: {
+	        "title": "",
+	        "subtitle": "",
+	        "posts": [],
+	        "author": "",
+	        "biography": "",
+	        "homepage": ""
+	    },
+	    currentPost: ""
+	};
+	
+	exports.default = new _vuex2.default({
+	    state: state,
+	    actions: _actions2.default,
+	    mutations: _mutations2.default
+	});
 
 /***/ },
 /* 77 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(78)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(79)
-	if (false) {
-	(function () {
-	var hotAPI = require("vue-hot-reload-api")
-	hotAPI.install(require("vue"))
-	if (!hotAPI.compatible) return
-	var id = "-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./Banner.vue"
-	hotAPI.createRecord(id, module.exports)
-	module.hot.accept(["-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./Banner.vue","-!vue-html!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./Banner.vue"], function () {
-	var newOptions = require("-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./Banner.vue")
-	var newTemplate = require("-!vue-html!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./Banner.vue")
-	hotAPI.update(id, newOptions, newTemplate)
-	})
-	})()
-	}
+	'use strict';
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.createLogger = undefined;
+	
+	var _util = __webpack_require__(78);
+	
+	var _devtool = __webpack_require__(79);
+	
+	var _devtool2 = _interopRequireDefault(_devtool);
+	
+	var _logger = __webpack_require__(80);
+	
+	var _logger2 = _interopRequireDefault(_logger);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	var Vue = undefined;
+	
+	var Vuex = (function () {
+	
+	  /**
+	   * @param {Object} options
+	   *        - {Object} state
+	   *        - {Object} actions
+	   *        - {Object} mutations
+	   *        - {Array} middlewares
+	   *        - {Boolean} strict
+	   */
+	
+	  function Vuex() {
+	    var _ref = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+	
+	    var _ref$state = _ref.state;
+	    var state = _ref$state === undefined ? {} : _ref$state;
+	    var _ref$actions = _ref.actions;
+	    var actions = _ref$actions === undefined ? {} : _ref$actions;
+	    var _ref$mutations = _ref.mutations;
+	    var mutations = _ref$mutations === undefined ? {} : _ref$mutations;
+	    var _ref$middlewares = _ref.middlewares;
+	    var middlewares = _ref$middlewares === undefined ? [] : _ref$middlewares;
+	    var _ref$strict = _ref.strict;
+	    var strict = _ref$strict === undefined ? false : _ref$strict;
+	
+	    _classCallCheck(this, Vuex);
+	
+	    // use a Vue instance to store the state tree
+	    this._vm = new Vue({
+	      data: state
+	    });
+	    this._dispatching = false;
+	    this.actions = Object.create(null);
+	    this._setupActions(actions);
+	    this._setupMutations(mutations);
+	    this._setupMiddlewares(middlewares, state);
+	    // add extra warnings in strict mode
+	    if (strict) {
+	      this._setupMutationCheck();
+	    }
+	  }
+	
+	  /**
+	   * Getter for the entire state tree.
+	   * Read only.
+	   *
+	   * @return {Object}
+	   */
+	
+	  _createClass(Vuex, [{
+	    key: 'dispatch',
+	
+	    /**
+	     * Dispatch an action.
+	     *
+	     * @param {String} type
+	     */
+	
+	    value: function dispatch(type) {
+	      for (var _len = arguments.length, payload = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+	        payload[_key - 1] = arguments[_key];
+	      }
+	
+	      var mutation = this._mutations[type];
+	      var prevSnapshot = this._prevSnapshot;
+	      var state = this.state;
+	      var snapshot = undefined,
+	          clonedPayload = undefined;
+	      if (mutation) {
+	        this._dispatching = true;
+	        // apply the mutation
+	        if (Array.isArray(mutation)) {
+	          mutation.forEach(function (m) {
+	            return m.apply(undefined, [state].concat(payload));
+	          });
+	        } else {
+	          mutation.apply(undefined, [state].concat(payload));
+	        }
+	        this._dispatching = false;
+	        // invoke middlewares
+	        if (this._needSnapshots) {
+	          snapshot = this._prevSnapshot = (0, _util.deepClone)(state);
+	          clonedPayload = (0, _util.deepClone)(payload);
+	        }
+	        this._middlewares.forEach(function (m) {
+	          if (m.onMutation) {
+	            if (m.snapshot) {
+	              m.onMutation({ type: type, payload: clonedPayload }, snapshot, prevSnapshot);
+	            } else {
+	              m.onMutation({ type: type, payload: payload }, state);
+	            }
+	          }
+	        });
+	      } else {
+	        console.warn('[vuex] Unknown mutation: ' + type);
+	      }
+	    }
+	
+	    /**
+	     * Hot update actions and mutations.
+	     *
+	     * @param {Object} options
+	     *        - {Object} [actions]
+	     *        - {Object} [mutations]
+	     */
+	
+	  }, {
+	    key: 'hotUpdate',
+	    value: function hotUpdate() {
+	      var _ref2 = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+	
+	      var actions = _ref2.actions;
+	      var mutations = _ref2.mutations;
+	
+	      if (actions) {
+	        this._setupActions(actions, true);
+	      }
+	      if (mutations) {
+	        this._setupMutations(mutations);
+	      }
+	    }
+	
+	    /**
+	     * Setup mutation check: if the vuex instance's state is mutated
+	     * outside of a mutation handler, we throw en error. This effectively
+	     * enforces all mutations to the state to be trackable and hot-reloadble.
+	     * However, this comes at a run time cost since we are doing a deep
+	     * watch on the entire state tree, so it is only enalbed with the
+	     * strict option is set to true.
+	     */
+	
+	  }, {
+	    key: '_setupMutationCheck',
+	    value: function _setupMutationCheck() {
+	      var _this = this;
+	
+	      // a hack to get the watcher constructor from older versions of Vue
+	      // mainly because the public $watch method does not allow sync
+	      // watchers.
+	      var unwatch = this._vm.$watch('__vuex__', function (a) {
+	        return a;
+	      });
+	      var Watcher = this._vm._watchers[0].constructor;
+	      unwatch();
+	      new Watcher(this._vm, '$data', function () {
+	        if (!_this._dispatching) {
+	          throw new Error('[vuex] Do not mutate vuex state outside mutation handlers.');
+	        }
+	      }, { deep: true, sync: true });
+	    }
+	
+	    /**
+	     * Set up the callable action functions exposed to components.
+	     * This method can be called multiple times for hot updates.
+	     * We keep the real action functions in an internal object,
+	     * and expose the public object which are just wrapper
+	     * functions that point to the real ones. This is so that
+	     * the reals ones can be hot reloaded.
+	     *
+	     * @param {Object} actions
+	     * @param {Boolean} [hot]
+	     */
+	
+	  }, {
+	    key: '_setupActions',
+	    value: function _setupActions(actions, hot) {
+	      var _this2 = this;
+	
+	      this._actions = Object.create(null);
+	      actions = Array.isArray(actions) ? (0, _util.mergeObjects)(actions) : actions;
+	      Object.keys(actions).forEach(function (name) {
+	        _this2._actions[name] = (0, _util.createAction)(actions[name], _this2);
+	        if (!_this2.actions[name]) {
+	          _this2.actions[name] = function () {
+	            var _actions;
+	
+	            return (_actions = _this2._actions)[name].apply(_actions, arguments);
+	          };
+	        }
+	      });
+	      // delete public actions that are no longer present
+	      // after a hot reload
+	      if (hot) {
+	        Object.keys(this.actions).forEach(function (name) {
+	          if (!actions[name]) {
+	            delete _this2.actions[name];
+	          }
+	        });
+	      }
+	    }
+	
+	    /**
+	     * Setup the mutation handlers. Effectively a event listener.
+	     * This method can be called multiple times for hot updates.
+	     *
+	     * @param {Object} mutations
+	     */
+	
+	  }, {
+	    key: '_setupMutations',
+	    value: function _setupMutations(mutations) {
+	      this._mutations = Array.isArray(mutations) ? (0, _util.mergeObjects)(mutations, true) : mutations;
+	    }
+	
+	    /**
+	     * Setup the middlewares. The devtools middleware is always
+	     * included, since it does nothing if no devtool is detected.
+	     *
+	     * A middleware can demand the state it receives to be
+	     * "snapshots", i.e. deep clones of the actual state tree.
+	     *
+	     * @param {Array} middlewares
+	     * @param {Object} state
+	     */
+	
+	  }, {
+	    key: '_setupMiddlewares',
+	    value: function _setupMiddlewares(middlewares, state) {
+	      this._middlewares = [_devtool2.default].concat(middlewares);
+	      this._needSnapshots = middlewares.some(function (m) {
+	        return m.snapshot;
+	      });
+	      if (this._needSnapshots) {
+	        console.log('[vuex] One or more of your middlewares are taking state snapshots ' + 'for each mutation. Make sure to use them only during development.');
+	      }
+	      var initialSnapshot = this._prevSnapshot = this._needSnapshots ? (0, _util.deepClone)(state) : null;
+	      // call init hooks
+	      this._middlewares.forEach(function (m) {
+	        if (m.onInit) {
+	          m.onInit(m.snapshot ? initialSnapshot : state);
+	        }
+	      });
+	    }
+	  }, {
+	    key: 'state',
+	    get: function get() {
+	      return this._vm._data;
+	    },
+	    set: function set(v) {
+	      throw new Error('[vuex] Vuex root state is read only.');
+	    }
+	  }]);
+	
+	  return Vuex;
+	})();
+	
+	// export logger factory
+	
+	exports.default = Vuex;
+	exports.createLogger = _logger2.default;
+	
+	Vuex.createLogger = _logger2.default;
+	
+	/**
+	 * Exposed install method
+	 */
+	
+	Vuex.install = function (_Vue) {
+	  Vue = _Vue;
+	};
 
 /***/ },
 /* 78 */
@@ -10779,79 +11096,376 @@
 
 	'use strict';
 	
-	Object.defineProperty(exports, '__esModule', {
-	        value: true
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
 	});
-	exports['default'] = {
-	        name: 'Banner'
-	};
-	module.exports = exports['default'];
+	exports.createAction = createAction;
+	exports.mergeObjects = mergeObjects;
+	exports.deepClone = deepClone;
+	
+	function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.constructor === Symbol ? "symbol" : typeof obj; }
+	
+	/**
+	 * Create a actual callable action function.
+	 *
+	 * @param {String|Function} action
+	 * @param {Vuex} vuex
+	 * @return {Function} [description]
+	 */
+	
+	function createAction(action, vuex) {
+	  if (typeof action === 'string') {
+	    // simple action string shorthand
+	    return function () {
+	      for (var _len = arguments.length, payload = Array(_len), _key = 0; _key < _len; _key++) {
+	        payload[_key] = arguments[_key];
+	      }
+	
+	      vuex.dispatch.apply(vuex, [action].concat(payload));
+	    };
+	  } else if (typeof action === 'function') {
+	    // thunk action
+	    return function () {
+	      for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+	        args[_key2] = arguments[_key2];
+	      }
+	
+	      var dispatch = function dispatch() {
+	        vuex.dispatch.apply(vuex, arguments);
+	      };
+	      action.apply(undefined, args)(dispatch, vuex.state);
+	    };
+	  }
+	}
+	
+	/**
+	 * Merge an array of objects into one.
+	 *
+	 * @param {Array<Object>} arr
+	 * @param {Boolean} allowDuplicate
+	 * @return {Object}
+	 */
+	
+	function mergeObjects(arr, allowDuplicate) {
+	  return arr.reduce(function (prev, obj) {
+	    Object.keys(obj).forEach(function (key) {
+	      var existing = prev[key];
+	      if (existing) {
+	        // allow multiple mutation objects to contain duplicate
+	        // handlers for the same mutation type
+	        if (allowDuplicate) {
+	          if (Array.isArray(existing)) {
+	            existing.push(obj[key]);
+	          } else {
+	            prev[key] = [prev[key], obj[key]];
+	          }
+	        } else {
+	          console.warn('[vuex] Duplicate action: ' + key);
+	        }
+	      } else {
+	        prev[key] = obj[key];
+	      }
+	    });
+	    return prev;
+	  }, {});
+	}
+	
+	/**
+	 * Deep clone an object. Faster than JSON.parse(JSON.stringify()).
+	 *
+	 * @param {*} obj
+	 * @return {*}
+	 */
+	
+	function deepClone(obj) {
+	  if (Array.isArray(obj)) {
+	    return obj.map(deepClone);
+	  } else if (obj && (typeof obj === 'undefined' ? 'undefined' : _typeof(obj)) === 'object') {
+	    var cloned = {};
+	    var keys = Object.keys(obj);
+	    for (var i = 0, l = keys.length; i < l; i++) {
+	      var key = keys[i];
+	      cloned[key] = deepClone(obj[key]);
+	    }
+	    return cloned;
+	  } else {
+	    return obj;
+	  }
+	}
 
 /***/ },
 /* 79 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"banner\">\r\n        <h1>{{$parent.site.title}}</h1>\r\n        <h1><small>{{$parent.site.subtitle}}</small></h1>\r\n    </div>";
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = {
+	  onInit: function onInit(state) {
+	    // TODO
+	  },
+	  onMutation: function onMutation(mutation, state) {
+	    // TODO
+	  }
+	};
+	module.exports = exports['default'];
 
 /***/ },
 /* 80 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	module.exports = __webpack_require__(81)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(83)
-	if (false) {
-	(function () {
-	var hotAPI = require("vue-hot-reload-api")
-	hotAPI.install(require("vue"))
-	if (!hotAPI.compatible) return
-	var id = "-!babel?optional[]=runtime&loose=all&nonStandard=false!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./Blog.vue"
-	hotAPI.createRecord(id, module.exports)
-	module.hot.accept(["-!babel?optional[]=runtime&loose=all&nonStandard=false!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./Blog.vue","-!vue-html!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./Blog.vue"], function () {
-	var newOptions = require("-!babel?optional[]=runtime&loose=all&nonStandard=false!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./Blog.vue")
-	var newTemplate = require("-!vue-html!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./Blog.vue")
-	hotAPI.update(id, newOptions, newTemplate)
-	})
-	})()
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = createLogger;
+	// Credits: borrowed code from fcomb/redux-logger
+	
+	function createLogger() {
+	  var _ref = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+	
+	  var _ref$collapsed = _ref.collapsed;
+	  var collapsed = _ref$collapsed === undefined ? true : _ref$collapsed;
+	  var _ref$transformer = _ref.transformer;
+	  var transformer = _ref$transformer === undefined ? function (state) {
+	    return state;
+	  } : _ref$transformer;
+	  var _ref$mutationTransfor = _ref.mutationTransformer;
+	  var mutationTransformer = _ref$mutationTransfor === undefined ? function (mut) {
+	    return mut;
+	  } : _ref$mutationTransfor;
+	
+	  return {
+	    snapshot: true,
+	    onMutation: function onMutation(mutation, nextState, prevState) {
+	      if (typeof console === 'undefined') {
+	        return;
+	      }
+	      var time = new Date();
+	      var formattedTime = ' @ ' + pad(time.getHours(), 2) + ':' + pad(time.getMinutes(), 2) + ':' + pad(time.getSeconds(), 2) + '.' + pad(time.getMilliseconds(), 3);
+	      var formattedMutation = mutationTransformer(mutation);
+	      var message = 'mutation ' + mutation.type + formattedTime;
+	      var startMessage = collapsed ? console.groupCollapsed : console.group;
+	
+	      // render
+	      try {
+	        startMessage.call(console, message);
+	      } catch (e) {
+	        console.log(message);
+	      }
+	
+	      console.log('%c prev state', 'color: #9E9E9E; font-weight: bold', prevState);
+	      console.log('%c mutation', 'color: #03A9F4; font-weight: bold', formattedMutation);
+	      console.log('%c next state', 'color: #4CAF50; font-weight: bold', nextState);
+	
+	      try {
+	        console.groupEnd();
+	      } catch (e) {
+	        console.log('—— log end ——');
+	      }
+	    }
+	  };
 	}
+	
+	function repeat(str, times) {
+	  return new Array(times + 1).join(str);
+	}
+	
+	function pad(num, maxLength) {
+	  return repeat('0', maxLength - num.toString().length) + num;
+	}
+	module.exports = exports['default'];
 
 /***/ },
 /* 81 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = {
+	    changePost: "CHANGE_POST",
+	    loadSite: "LOAD_SITE"
+	};
+
+/***/ },
+/* 82 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = {
+	    CHANGE_POST: function CHANGE_POST(state, url) {
+	        state.currentPost = url;
+	    },
+	    LOAD_SITE: function LOAD_SITE(state, site) {
+	        state.site = _extends({}, site);
+	    }
+	};
+
+/***/ },
+/* 83 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(84)
+	
+	if (module.exports.__esModule) module.exports = module.exports.default
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(85)
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "D:\\Documents\\GitHub\\tiny-pages-server\\tiny-pages\\src\\components\\Banner.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
+	  }
+	})()}
+
+/***/ },
+/* 84 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
-	var _interopRequireDefault = __webpack_require__(6)["default"];
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 	
-	exports.__esModule = true;
+	var _vuex = __webpack_require__(76);
 	
-	var _marked = __webpack_require__(82);
+	var _vuex2 = _interopRequireDefault(_vuex);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = {
+	    name: 'Banner',
+	    computed: {
+	        title: function title() {
+	            return _vuex2.default.state.site.title;
+	        },
+	        subtitle: function subtitle() {
+	            return _vuex2.default.state.site.subtitle;
+	        }
+	    }
+	};
+	// </script>
+	// <template>
+
+	//     <div class="banner">
+
+	//         <h1>{{title}}</h1>
+
+	//         <h1><small>{{subtitle}}</small></h1>
+
+	//     </div>
+
+	// </template>
+
+	// <script lang="babel">
+
+/***/ },
+/* 85 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"banner\">\r\n        <h1>{{title}}</h1>\r\n        <h1><small>{{subtitle}}</small></h1>\r\n    </div>";
+
+/***/ },
+/* 86 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(87)
+	
+	if (module.exports.__esModule) module.exports = module.exports.default
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(89)
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "D:\\Documents\\GitHub\\tiny-pages-server\\tiny-pages\\src\\components\\Blog.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
+	  }
+	})()}
+
+/***/ },
+/* 87 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _vuex = __webpack_require__(76);
+	
+	var _vuex2 = _interopRequireDefault(_vuex);
+	
+	var _marked = __webpack_require__(88);
 	
 	var _marked2 = _interopRequireDefault(_marked);
 	
-	exports["default"] = {
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	// <template>
+	
+	//     <div class="blog">
+	
+	//         <article class="md">
+	
+	//             {{{content}}}
+	
+	//         </article>
+	
+	//     </div>
+	
+	// </template>
+	
+	// <script>
+	exports.default = {
 	    name: "blog",
 	    data: function data() {
 	        return {
 	            content: ""
 	        };
 	    },
-	    events: {
-	        'post-change': function postChange(url) {
+	
+	    computed: {
+	        url: function url() {
+	            return _vuex2.default.state.currentPost;
+	        }
+	    },
+	    watch: {
+	        'url': function url(_url) {
 	            var _this = this;
-	            fetch(url).then(function (response) {
+	            fetch(_url).then(function (response) {
 	                return response.text();
 	            }).then(function (text) {
-	                _this.content = _marked2["default"](text);
-	            })["catch"](function (ex) {
+	                _this.content = (0, _marked2.default)(text);
+	            }).catch(function (ex) {
 	                console.log(ex.message);
 	            });
 	        }
 	    }
 	};
-	module.exports = exports["default"];
+	// </script>
 
 /***/ },
-/* 82 */
+/* 88 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
@@ -12143,113 +12757,184 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 83 */
+/* 89 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"blog\">\r\n        <article class=\"md\">\r\n            {{{content}}}\r\n        </article>\r\n    </div>";
 
 /***/ },
-/* 84 */
+/* 90 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(85)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(89)
-	if (false) {
-	(function () {
-	var hotAPI = require("vue-hot-reload-api")
-	hotAPI.install(require("vue"))
-	if (!hotAPI.compatible) return
-	var id = "-!babel?optional[]=runtime&loose=all&nonStandard=false!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./Sidebar.vue"
-	hotAPI.createRecord(id, module.exports)
-	module.hot.accept(["-!babel?optional[]=runtime&loose=all&nonStandard=false!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./Sidebar.vue","-!vue-html!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./Sidebar.vue"], function () {
-	var newOptions = require("-!babel?optional[]=runtime&loose=all&nonStandard=false!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./Sidebar.vue")
-	var newTemplate = require("-!vue-html!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./Sidebar.vue")
-	hotAPI.update(id, newOptions, newTemplate)
-	})
-	})()
-	}
+	module.exports = __webpack_require__(91)
+	
+	if (module.exports.__esModule) module.exports = module.exports.default
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(95)
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "D:\\Documents\\GitHub\\tiny-pages-server\\tiny-pages\\src\\components\\Sidebar.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
+	  }
+	})()}
 
 /***/ },
-/* 85 */
+/* 91 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
-	var _interopRequireDefault = __webpack_require__(6)["default"];
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 	
-	exports.__esModule = true;
+	var _PostList = __webpack_require__(92);
 	
-	var _PostListVue = __webpack_require__(86);
+	var _PostList2 = _interopRequireDefault(_PostList);
 	
-	var _PostListVue2 = _interopRequireDefault(_PostListVue);
+	var _vuex = __webpack_require__(76);
 	
-	exports["default"] = {
+	var _vuex2 = _interopRequireDefault(_vuex);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	// <template>
+	
+	//     <aside class="sidebar">
+	
+	//         <div>
+	
+	//             <h3 class="block-title">{{author}}</h3>
+	
+	//             <h4>{{biography}}</h4>
+	
+	//             <a href="{{homepage}}"><h4>{{homepage}}</h4></a>
+	
+	//         </div>
+	
+	//         <postlist></postlist>
+	
+	//     </aside>
+	
+	// </template>
+	
+	// <script>
+	exports.default = {
 	    name: "sidebar",
 	    components: {
-	        postlist: _PostListVue2["default"]
-	    }
-	};
-	module.exports = exports["default"];
-
-/***/ },
-/* 86 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__(87)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(88)
-	if (false) {
-	(function () {
-	var hotAPI = require("vue-hot-reload-api")
-	hotAPI.install(require("vue"))
-	if (!hotAPI.compatible) return
-	var id = "-!babel?optional[]=runtime&loose=all&nonStandard=false!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./PostList.vue"
-	hotAPI.createRecord(id, module.exports)
-	module.hot.accept(["-!babel?optional[]=runtime&loose=all&nonStandard=false!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./PostList.vue","-!vue-html!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./PostList.vue"], function () {
-	var newOptions = require("-!babel?optional[]=runtime&loose=all&nonStandard=false!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./PostList.vue")
-	var newTemplate = require("-!vue-html!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./PostList.vue")
-	hotAPI.update(id, newOptions, newTemplate)
-	})
-	})()
-	}
-
-/***/ },
-/* 87 */
-/***/ function(module, exports) {
-
-	"use strict";
-	
-	exports.__esModule = true;
-	exports["default"] = {
-	    name: "postlist",
-	    props: ["posts"],
-	    methods: {
-	        loadPost: function loadPost(url) {
-	            this.$dispatch("post-change", url);
+	        postlist: _PostList2.default
+	    },
+	    computed: {
+	        author: function author() {
+	            return _vuex2.default.state.site.author;
+	        },
+	        biography: function biography() {
+	            return _vuex2.default.state.site.biography;
+	        },
+	        homepage: function homepage() {
+	            return _vuex2.default.state.site.homepage;
 	        }
 	    }
 	};
-	module.exports = exports["default"];
+	// </script>
 
 /***/ },
-/* 88 */
+/* 92 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(93)
+	
+	if (module.exports.__esModule) module.exports = module.exports.default
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(94)
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "D:\\Documents\\GitHub\\tiny-pages-server\\tiny-pages\\src\\components\\PostList.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
+	  }
+	})()}
+
+/***/ },
+/* 93 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _vuex = __webpack_require__(76);
+	
+	var _vuex2 = _interopRequireDefault(_vuex);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var changePost = _vuex2.default.actions.changePost; // <template>
+	
+	//     <div class="post-list">
+	
+	//         <h3 class="block-title">Articles</h3>
+	
+	//         <ul v-if="posts">
+	
+	//             <li v-for="post in posts" v-on:click="loadPost(post.url)">
+	
+	//                     {{post.title}}
+	
+	//             </li>
+	
+	//         </ul>
+	
+	//     </div>
+	
+	// </template>
+	
+	// <script>
+	
+	exports.default = {
+	    name: "postlist",
+	    methods: {
+	        loadPost: function loadPost(url) {
+	            changePost(url);
+	        }
+	    },
+	    computed: {
+	        posts: function posts() {
+	            return _vuex2.default.state.site.posts;
+	        }
+	    }
+	};
+	// </script>
+
+/***/ },
+/* 94 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"post-list\">\r\n        <h3 class=\"block-title\">Articles</h3>\r\n        <ul v-if=\"posts\">\r\n            <li v-for=\"post in posts\" v-on:click=\"loadPost(post.url)\">\r\n                    {{post.title}}\r\n            </li>\r\n        </ul>\r\n    </div>";
 
 /***/ },
-/* 89 */
+/* 95 */
 /***/ function(module, exports) {
 
-	module.exports = "<aside class=\"sidebar\">\r\n        <div>\r\n            <h3 class=\"block-title\">{{$parent.site.author}}</h3>\r\n            <h4>{{$parent.site.biography}}</h4>\r\n            <a href=\"{{$parent.site.homepage}}\"><h4>{{$parent.site.homepage}}</h4></a>\r\n        </div>\r\n        <postlist :posts=\"$parent.site.posts\"></postlist>\r\n    </aside>";
+	module.exports = "<aside class=\"sidebar\">\r\n        <div>\r\n            <h3 class=\"block-title\">{{author}}</h3>\r\n            <h4>{{biography}}</h4>\r\n            <a href=\"{{homepage}}\"><h4>{{homepage}}</h4></a>\r\n        </div>\r\n        <postlist></postlist>\r\n    </aside>";
 
 /***/ },
-/* 90 */
+/* 96 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"app\" id=\"wrapper\">\r\n        <Banner></Banner>\r\n        <div class=\"content\">\r\n            <blog></blog>\r\n            <sidebar></sidebar>\r\n        </div>\r\n    </div>";
 
 /***/ },
-/* 91 */
+/* 97 */
 /***/ function(module, exports) {
 
 	(function() {
@@ -12636,23 +13321,23 @@
 
 
 /***/ },
-/* 92 */
+/* 98 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	module.exports = __webpack_require__(93)
-	__webpack_require__(96)
-	__webpack_require__(97)
-	__webpack_require__(98)
+	module.exports = __webpack_require__(99)
+	__webpack_require__(102)
+	__webpack_require__(103)
+	__webpack_require__(104)
 
 /***/ },
-/* 93 */
+/* 99 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var asap = __webpack_require__(94)
+	var asap = __webpack_require__(100)
 	
 	module.exports = Promise;
 	function Promise(fn) {
@@ -12758,7 +13443,7 @@
 
 
 /***/ },
-/* 94 */
+/* 100 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process, setImmediate) {
@@ -12875,13 +13560,13 @@
 	module.exports = asap;
 	
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8), __webpack_require__(95).setImmediate))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7), __webpack_require__(101).setImmediate))
 
 /***/ },
-/* 95 */
+/* 101 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(setImmediate, clearImmediate) {var nextTick = __webpack_require__(8).nextTick;
+	/* WEBPACK VAR INJECTION */(function(setImmediate, clearImmediate) {var nextTick = __webpack_require__(7).nextTick;
 	var apply = Function.prototype.apply;
 	var slice = Array.prototype.slice;
 	var immediateIds = {};
@@ -12957,16 +13642,16 @@
 	exports.clearImmediate = typeof clearImmediate === "function" ? clearImmediate : function(id) {
 	  delete immediateIds[id];
 	};
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(95).setImmediate, __webpack_require__(95).clearImmediate))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(101).setImmediate, __webpack_require__(101).clearImmediate))
 
 /***/ },
-/* 96 */
+/* 102 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var Promise = __webpack_require__(93)
-	var asap = __webpack_require__(94)
+	var Promise = __webpack_require__(99)
+	var asap = __webpack_require__(100)
 	
 	module.exports = Promise
 	Promise.prototype.done = function (onFulfilled, onRejected) {
@@ -12979,15 +13664,15 @@
 	}
 
 /***/ },
-/* 97 */
+/* 103 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	//This file contains the ES6 extensions to the core Promises/A+ API
 	
-	var Promise = __webpack_require__(93)
-	var asap = __webpack_require__(94)
+	var Promise = __webpack_require__(99)
+	var asap = __webpack_require__(100)
 	
 	module.exports = Promise
 	
@@ -13093,15 +13778,15 @@
 
 
 /***/ },
-/* 98 */
+/* 104 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	//This file contains then/promise specific extensions that are only useful for node.js interop
 	
-	var Promise = __webpack_require__(93)
-	var asap = __webpack_require__(94)
+	var Promise = __webpack_require__(99)
+	var asap = __webpack_require__(100)
 	
 	module.exports = Promise
 	

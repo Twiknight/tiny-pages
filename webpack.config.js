@@ -20,9 +20,12 @@ module.exports = {
         // excluding some local linked packages.
         // for normal use cases only node_modules is needed.
         exclude: /node_modules|vue\/src|vue-router\/|vue-loader\/|vue-hot-reload-api\//,
-        loader: 'babel?optional[]=runtime&loose=all'
+         loader: 'babel'
       }
     ]
+  },
+  babel:{
+      'presets': ['es2015', 'stage-0']
   }
 }
 

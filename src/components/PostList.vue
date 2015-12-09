@@ -10,13 +10,21 @@
 </template>
 
 <script>
-    export default{
-        name:"postlist",
-        props:["posts"],
-        methods:{
-            loadPost(url){
-                this.$dispatch("post-change", url);
-            }
+import vuex from '../vuex';
+
+const changePost = vuex.actions.changePost;
+
+export default{
+    name:"postlist",
+    methods:{
+        loadPost(url){
+            changePost(url);
+        }
+    },
+    computed:{
+        posts(){
+            return vuex.state.site.posts;
         }
     }
+}
 </script>
