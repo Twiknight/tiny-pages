@@ -1,21 +1,33 @@
 <template>
     <aside class="sidebar">
         <div>
-            <h3 class="block-title">{{$parent.site.author}}</h3>
-            <h4>{{$parent.site.biography}}</h4>
-            <a href="{{$parent.site.homepage}}"><h4>{{$parent.site.homepage}}</h4></a>
+            <h3 class="block-title">{{author}}</h3>
+            <h4>{{biography}}</h4>
+            <a href="{{homepage}}"><h4>{{homepage}}</h4></a>
         </div>
-        <postlist :posts="$parent.site.posts"></postlist>
+        <postlist></postlist>
     </aside>
 </template>
 
 <script>
     import PostList from "./PostList.vue"
+    import vuex from "../vuex"
 
     export default {
         name:"sidebar",
         components:{
             postlist:PostList
+        },
+        computed:{
+            author(){
+                return vuex.state.site.author;
+            },
+            biography(){
+                return vuex.state.site.biography;
+            },
+            homepage(){
+                return vuex.state.site.homepage;
+            }
         }
     }
 </script>
