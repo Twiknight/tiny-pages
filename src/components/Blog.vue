@@ -8,7 +8,7 @@
 
 <script>
 import  vuex from "../vuex";
-import marked from "marked";
+import {fetchBlog} from "../utils";
 
 export default{
     name: "blog",
@@ -24,13 +24,8 @@ export default{
     },
     watch:{
         'url':function(url){
-            let _this = this;
-            fetch(url).then(function(response){
-                return response.text();
-            }).then(function(text){
-                _this.content = marked(text);
-            }).catch(function(ex){
-                console.log(ex.message);
+            fetchBlog(url).then((text)=>{
+                this.content = text;
             });
         }
     }

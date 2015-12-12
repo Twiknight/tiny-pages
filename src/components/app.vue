@@ -11,6 +11,7 @@
 <script lang="babel">
 import Vue from "vue";
 import vuex from "../vuex"
+import {fetchSiteInfo} from "../utils"
 
 import Banner from "./Banner.vue";
 import Blog from "./Blog.vue";
@@ -28,9 +29,7 @@ export default{
         sidebar:Sidebar
     },
     created(){
-        fetch('./site.json').then(function(response){
-            return response.json();
-        }).then(function(site){
+        fetchSiteInfo().then(function(site){
             loadSite(site);
             if(site.posts && [...site.posts].length>0){
                 changePost(site.posts[0].url);
