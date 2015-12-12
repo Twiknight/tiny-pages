@@ -54,11 +54,11 @@
 	
 	var _app2 = _interopRequireDefault(_app);
 	
-	var _whatwgFetch = __webpack_require__(97);
+	var _whatwgFetch = __webpack_require__(100);
 	
 	var _whatwgFetch2 = _interopRequireDefault(_whatwgFetch);
 	
-	var _promise2 = __webpack_require__(98);
+	var _promise2 = __webpack_require__(101);
 	
 	var _promise3 = _interopRequireDefault(_promise2);
 	
@@ -10661,7 +10661,7 @@
 	module.exports = __webpack_require__(75)
 	
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(96)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(99)
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
@@ -10692,15 +10692,17 @@
 	
 	var _vuex2 = _interopRequireDefault(_vuex);
 	
-	var _Banner = __webpack_require__(83);
+	var _utils = __webpack_require__(83);
+	
+	var _Banner = __webpack_require__(87);
 	
 	var _Banner2 = _interopRequireDefault(_Banner);
 	
-	var _Blog = __webpack_require__(86);
+	var _Blog = __webpack_require__(90);
 	
 	var _Blog2 = _interopRequireDefault(_Blog);
 	
-	var _Sidebar = __webpack_require__(90);
+	var _Sidebar = __webpack_require__(93);
 	
 	var _Sidebar2 = _interopRequireDefault(_Sidebar);
 	
@@ -10738,9 +10740,7 @@
 	        sidebar: _Sidebar2.default
 	    },
 	    created: function created() {
-	        fetch('./site.json').then(function (response) {
-	            return response.json();
-	        }).then(function (site) {
+	        (0, _utils.fetchSiteInfo)().then(function (site) {
 	            loadSite(site);
 	            if (site.posts && [].concat(_toConsumableArray(site.posts)).length > 0) {
 	                changePost(site.posts[0].url);
@@ -11317,155 +11317,55 @@
 /* 83 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(84)
+	'use strict';
 	
-	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(85)
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
-	  if (!hotAPI.compatible) return
-	  var id = "D:\\Documents\\GitHub\\tiny-pages-server\\tiny-pages\\src\\components\\Banner.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
-	  }
-	})()}
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.fetchSiteInfo = exports.fetchBlog = undefined;
+	
+	var _fetchBlog = __webpack_require__(84);
+	
+	var _fetchBlog2 = _interopRequireDefault(_fetchBlog);
+	
+	var _fetchSiteInfo = __webpack_require__(86);
+	
+	var _fetchSiteInfo2 = _interopRequireDefault(_fetchSiteInfo);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.fetchBlog = _fetchBlog2.default;
+	exports.fetchSiteInfo = _fetchSiteInfo2.default;
 
 /***/ },
 /* 84 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+	exports.default = fetchBlog;
 	
-	var _vuex = __webpack_require__(76);
-	
-	var _vuex2 = _interopRequireDefault(_vuex);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	exports.default = {
-	    name: 'Banner',
-	    computed: {
-	        title: function title() {
-	            return _vuex2.default.state.site.title;
-	        },
-	        subtitle: function subtitle() {
-	            return _vuex2.default.state.site.subtitle;
-	        }
-	    }
-	};
-	// </script>
-	// <template>
-
-	//     <div class="banner">
-
-	//         <h1>{{title}}</h1>
-
-	//         <h1><small>{{subtitle}}</small></h1>
-
-	//     </div>
-
-	// </template>
-
-	// <script lang="babel">
-
-/***/ },
-/* 85 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"banner\">\r\n        <h1>{{title}}</h1>\r\n        <h1><small>{{subtitle}}</small></h1>\r\n    </div>";
-
-/***/ },
-/* 86 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__(87)
-	
-	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(89)
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
-	  if (!hotAPI.compatible) return
-	  var id = "D:\\Documents\\GitHub\\tiny-pages-server\\tiny-pages\\src\\components\\Blog.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
-	  }
-	})()}
-
-/***/ },
-/* 87 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _vuex = __webpack_require__(76);
-	
-	var _vuex2 = _interopRequireDefault(_vuex);
-	
-	var _marked = __webpack_require__(88);
+	var _marked = __webpack_require__(85);
 	
 	var _marked2 = _interopRequireDefault(_marked);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	// <template>
-	
-	//     <div class="blog">
-	
-	//         <article class="md">
-	
-	//             {{{content}}}
-	
-	//         </article>
-	
-	//     </div>
-	
-	// </template>
-	
-	// <script>
-	exports.default = {
-	    name: "blog",
-	    data: function data() {
-	        return {
-	            content: ""
-	        };
-	    },
-	
-	    computed: {
-	        url: function url() {
-	            return _vuex2.default.state.currentPost;
-	        }
-	    },
-	    watch: {
-	        'url': function url(_url) {
-	            var _this = this;
-	            fetch(_url).then(function (response) {
-	                return response.text();
-	            }).then(function (text) {
-	                _this.content = (0, _marked2.default)(text);
-	            }).catch(function (ex) {
-	                console.log(ex.message);
-	            });
-	        }
-	    }
-	};
-	// </script>
+	function fetchBlog(url) {
+	    return fetch(url).then(function (resp) {
+	        return resp.text();
+	    }).then(function (text) {
+	        return (0, _marked2.default)(text);
+	    }).catch(function (ex) {
+	        console.log(ex);
+	    });
+	}
 
 /***/ },
-/* 88 */
+/* 85 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
@@ -12757,10 +12657,88 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
+/* 86 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	exports.default = function () {
+	    return fetch('./site.json').then(function (resp) {
+	        return resp.json();
+	    });
+	};
+
+/***/ },
+/* 87 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(88)
+	
+	if (module.exports.__esModule) module.exports = module.exports.default
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(89)
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "D:\\Documents\\GitHub\\tiny-pages-server\\tiny-pages\\src\\components\\Banner.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
+	  }
+	})()}
+
+/***/ },
+/* 88 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _vuex = __webpack_require__(76);
+	
+	var _vuex2 = _interopRequireDefault(_vuex);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = {
+	    name: 'Banner',
+	    computed: {
+	        title: function title() {
+	            return _vuex2.default.state.site.title;
+	        },
+	        subtitle: function subtitle() {
+	            return _vuex2.default.state.site.subtitle;
+	        }
+	    }
+	};
+	// </script>
+	// <template>
+
+	//     <div class="banner">
+
+	//         <h1>{{title}}</h1>
+
+	//         <h1><small>{{subtitle}}</small></h1>
+
+	//     </div>
+
+	// </template>
+
+	// <script lang="babel">
+
+/***/ },
 /* 89 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"blog\">\r\n        <article class=\"md\">\r\n            {{{content}}}\r\n        </article>\r\n    </div>";
+	module.exports = "<div class=\"banner\">\r\n        <h1>{{title}}</h1>\r\n        <h1><small>{{subtitle}}</small></h1>\r\n    </div>";
 
 /***/ },
 /* 90 */
@@ -12769,12 +12747,12 @@
 	module.exports = __webpack_require__(91)
 	
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(95)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(92)
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "D:\\Documents\\GitHub\\tiny-pages-server\\tiny-pages\\src\\components\\Sidebar.vue"
+	  var id = "D:\\Documents\\GitHub\\tiny-pages-server\\tiny-pages\\src\\components\\Blog.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -12792,7 +12770,91 @@
 	    value: true
 	});
 	
-	var _PostList = __webpack_require__(92);
+	var _vuex = __webpack_require__(76);
+	
+	var _vuex2 = _interopRequireDefault(_vuex);
+	
+	var _utils = __webpack_require__(83);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	// <template>
+	
+	//     <div class="blog">
+	
+	//         <article class="md">
+	
+	//             {{{content}}}
+	
+	//         </article>
+	
+	//     </div>
+	
+	// </template>
+	
+	// <script>
+	exports.default = {
+	    name: "blog",
+	    data: function data() {
+	        return {
+	            content: ""
+	        };
+	    },
+	
+	    computed: {
+	        url: function url() {
+	            return _vuex2.default.state.currentPost;
+	        }
+	    },
+	    watch: {
+	        'url': function url(_url) {
+	            var _this = this;
+	
+	            (0, _utils.fetchBlog)(_url).then(function (text) {
+	                _this.content = text;
+	            });
+	        }
+	    }
+	};
+	// </script>
+
+/***/ },
+/* 92 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"blog\">\r\n        <article class=\"md\">\r\n            {{{content}}}\r\n        </article>\r\n    </div>";
+
+/***/ },
+/* 93 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(94)
+	
+	if (module.exports.__esModule) module.exports = module.exports.default
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(98)
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "D:\\Documents\\GitHub\\tiny-pages-server\\tiny-pages\\src\\components\\Sidebar.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
+	  }
+	})()}
+
+/***/ },
+/* 94 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _PostList = __webpack_require__(95);
 	
 	var _PostList2 = _interopRequireDefault(_PostList);
 	
@@ -12843,13 +12905,13 @@
 	// </script>
 
 /***/ },
-/* 92 */
+/* 95 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(93)
+	module.exports = __webpack_require__(96)
 	
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(94)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(97)
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
@@ -12863,7 +12925,7 @@
 	})()}
 
 /***/ },
-/* 93 */
+/* 96 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -12916,25 +12978,25 @@
 	// </script>
 
 /***/ },
-/* 94 */
+/* 97 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"post-list\">\r\n        <h3 class=\"block-title\">Articles</h3>\r\n        <ul v-if=\"posts\">\r\n            <li v-for=\"post in posts\" v-on:click=\"loadPost(post.url)\">\r\n                    {{post.title}}\r\n            </li>\r\n        </ul>\r\n    </div>";
 
 /***/ },
-/* 95 */
+/* 98 */
 /***/ function(module, exports) {
 
 	module.exports = "<aside class=\"sidebar\">\r\n        <div>\r\n            <h3 class=\"block-title\">{{author}}</h3>\r\n            <h4>{{biography}}</h4>\r\n            <a href=\"{{homepage}}\"><h4>{{homepage}}</h4></a>\r\n        </div>\r\n        <postlist></postlist>\r\n    </aside>";
 
 /***/ },
-/* 96 */
+/* 99 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"app\" id=\"wrapper\">\r\n        <Banner></Banner>\r\n        <div class=\"content\">\r\n            <blog></blog>\r\n            <sidebar></sidebar>\r\n        </div>\r\n    </div>";
 
 /***/ },
-/* 97 */
+/* 100 */
 /***/ function(module, exports) {
 
 	(function() {
@@ -13321,23 +13383,23 @@
 
 
 /***/ },
-/* 98 */
+/* 101 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	module.exports = __webpack_require__(99)
-	__webpack_require__(102)
-	__webpack_require__(103)
-	__webpack_require__(104)
+	module.exports = __webpack_require__(102)
+	__webpack_require__(105)
+	__webpack_require__(106)
+	__webpack_require__(107)
 
 /***/ },
-/* 99 */
+/* 102 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var asap = __webpack_require__(100)
+	var asap = __webpack_require__(103)
 	
 	module.exports = Promise;
 	function Promise(fn) {
@@ -13443,7 +13505,7 @@
 
 
 /***/ },
-/* 100 */
+/* 103 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process, setImmediate) {
@@ -13560,10 +13622,10 @@
 	module.exports = asap;
 	
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7), __webpack_require__(101).setImmediate))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7), __webpack_require__(104).setImmediate))
 
 /***/ },
-/* 101 */
+/* 104 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(setImmediate, clearImmediate) {var nextTick = __webpack_require__(7).nextTick;
@@ -13642,16 +13704,16 @@
 	exports.clearImmediate = typeof clearImmediate === "function" ? clearImmediate : function(id) {
 	  delete immediateIds[id];
 	};
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(101).setImmediate, __webpack_require__(101).clearImmediate))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(104).setImmediate, __webpack_require__(104).clearImmediate))
 
 /***/ },
-/* 102 */
+/* 105 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var Promise = __webpack_require__(99)
-	var asap = __webpack_require__(100)
+	var Promise = __webpack_require__(102)
+	var asap = __webpack_require__(103)
 	
 	module.exports = Promise
 	Promise.prototype.done = function (onFulfilled, onRejected) {
@@ -13664,15 +13726,15 @@
 	}
 
 /***/ },
-/* 103 */
+/* 106 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	//This file contains the ES6 extensions to the core Promises/A+ API
 	
-	var Promise = __webpack_require__(99)
-	var asap = __webpack_require__(100)
+	var Promise = __webpack_require__(102)
+	var asap = __webpack_require__(103)
 	
 	module.exports = Promise
 	
@@ -13778,15 +13840,15 @@
 
 
 /***/ },
-/* 104 */
+/* 107 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	//This file contains then/promise specific extensions that are only useful for node.js interop
 	
-	var Promise = __webpack_require__(99)
-	var asap = __webpack_require__(100)
+	var Promise = __webpack_require__(102)
+	var asap = __webpack_require__(103)
 	
 	module.exports = Promise
 	
